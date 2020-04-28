@@ -3,6 +3,9 @@ import random
 number = random.randint(-10000, 10000)
 lastdig = abs(number) % 10
 
+if number <= 0:
+    lastdig = lastdig * -1
+
 str = "Last digit of {} is {}".format(number, lastdig)
 
 if lastdig == 0:
