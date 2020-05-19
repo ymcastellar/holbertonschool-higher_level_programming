@@ -1,12 +1,14 @@
 #!/usr/bin/python3
+""" class that defines a square """
+
+
 class Square:
-    """ class that defines a square """
-    def __init__(self, size=0):
-        """ ---builder to define size---
+    """ ---builder to define size---
 
         Args: size: size of square.
 
         """
+    def __init__(self, size=0):
         self.__size = size
 
         if type(self.__size) is not int:
