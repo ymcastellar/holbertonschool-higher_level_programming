@@ -5,6 +5,11 @@
 
 
 def text_indentation(text):
+    """[text_indentation]
+
+    Arguments:
+        text {[str]} -- [a text to indent]
+    """
     if text:
         if type(text) is str:
             char = ['.', '?', ':']

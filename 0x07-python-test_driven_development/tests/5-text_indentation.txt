@@ -31,4 +31,11 @@
     ...
     TypeError: text_indentation() takes 1 positional argument but 2 were given
 
+    >>> text_indentation(str(123456789) + ': ')
+    123456789:
+    <BLANKLINE>
+
+    >>> text_indentation(str(123456789))
+    123456789
+
 
