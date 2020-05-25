@@ -48,13 +48,13 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return ("")
         width = "#" * self.width
-        Toprint = ""
-        for i in range(self.height):
-            Toprint += width + "\n"
+        Toprint = width
+        for i in range(self.height - 1):
+            Toprint += "\n" + width
         return Toprint
 
     def __repr__(self):
         return ("Rectangle({}, {})".format(self.__width, self.__height))
-    
+
     def __del__(self):
         print("Bye rectangle...")
