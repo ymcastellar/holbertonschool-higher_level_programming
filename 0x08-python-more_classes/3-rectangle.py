@@ -48,7 +48,7 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return ("")
         width = "#" * self.width
-        Toprint = "width"
-        for i in range(self.height):
+        Toprint = width
+        for i in range(self.height - 1):
             Toprint += "\n" + width
         return Toprint
