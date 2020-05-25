@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""[Area and Perimeter]
+"""[String representation]
 """
 
 
@@ -48,7 +48,7 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return ("")
         width = "#" * self.width
-        Toprint = ""
+        Toprint = "width"
         for i in range(self.height):
-            Toprint += width + "\n"
+            Toprint += "\n" + width
         return Toprint
