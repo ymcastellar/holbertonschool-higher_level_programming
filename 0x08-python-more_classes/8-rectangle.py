@@ -51,9 +51,9 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return ("")
         width = str(self.print_symbol) * self.width
-        Toprint = ""
-        for i in range(self.height):
-            Toprint += width + "\n"
+        Toprint = width
+        for i in range(self.height - 1):
+            Toprint += "\n" + width
         return Toprint
 
     def __repr__(self):
@@ -63,12 +63,16 @@ class Rectangle:
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
 
+    @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         if not isinstance(rect_1, Rectangle):
             raise TypeError('rect_1 must be an instance of Rectangle')
 
         if not isinstance(rect_2, Rectangle):
             raise TypeError('rect_1 must be an instance of Rectangle')
-        if rect_2.area() > rect_1.area():
+        if rect_1.area() == rect_2.area():
+            return rect_1      
+        elif rect_2.area() > rect_1.area():
             return rect_2
-        return rect_1
+        else:
+            return rect_1
