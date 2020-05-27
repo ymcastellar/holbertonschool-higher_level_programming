@@ -3,7 +3,6 @@
 """
 
 
-class LockedClass :
+class LockedClass:
     """[LockedClass]
     """
-    
