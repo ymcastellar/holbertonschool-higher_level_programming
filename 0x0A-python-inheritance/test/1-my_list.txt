@@ -1,0 +1,29 @@
+# 1-my_list.txt
+===============================
+            Task #1
+===============================
+::
+
+    >>> MyList = __import__('1-my_list').MyList
+
+    >>> my_list = MyList([1, 2, 3])
+    >>> print(my_list)
+    [1, 2, 3]
+
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> print(my_list)
+    [1, 2, 3]
+
+    >>> my_list = MyList()
+    >>> my_list.append("Yoyman")
+    >>> my_list.append("Juliana")
+    >>> my_list.append("Angel")
+    >>> my_list.append("Elkin")
+    >>> my_list.append("School")
+    >>> my_list.append("Holberton")
+    >>> my_list.append("Betty")
+    >>> print(my_list)
+    ['Angel', 'Elkin', 'Juliana', School', 'Holberton', 'Betty', 'Yoyman]
