@@ -4,8 +4,10 @@
 ===============================
 ::
 
-   >>> type(MyList())
-   <class '1-my_list.MyList'>
+    >>> MyList = __import__('1-my_list').MyList
+    
+    >>> type(MyList())
+    <class '1-my_list.MyList'>
 
     >>> issubclass(MyList, list)
     True
@@ -58,20 +60,20 @@
     >>> l.print_sorted()
     [-599, -434, -4, -3, 10, 11, 12, 13, 14]
 
->>> l = MyList()
->>> l.append(-10)
->>> l.append(-49)
->>> l.append(-9)
->>> l.append(-2)
->>> l.print_sorted()
-[-49, -10, -9, -2]
+    >>> l = MyList()
+    >>> l.append(-10)
+    >>> l.append(-49)
+    >>> l.append(-9)
+    >>> l.append(-2)
+    >>> l.print_sorted()
+    [-49, -10, -9, -2]
 
->>> l = MyList()
->>> l.append(0)
->>> l.append(0)
->>> l.append(0)
->>> l.print_sorted()
-[0, 0, 0]
+    >>> l = MyList()
+    >>> l.append(0)
+    >>> l.append(0)
+    >>> l.append(0)
+    >>> l.print_sorted()
+    [0, 0, 0]
 
 >>> l.print_sorted(44, 33)
 Traceback (most recent call last):
