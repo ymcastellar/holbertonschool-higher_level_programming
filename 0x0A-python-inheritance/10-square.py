@@ -14,9 +14,7 @@ class Square(Rectangle):
         self.__size = size
         super().__init__(size, size)
         self.integer_validator("size", size)
-    
+
     def __str__(self):
         string = "[Rectangle] {}/{}" .format(self.__size, self.__size)
         return string
-        
-        
