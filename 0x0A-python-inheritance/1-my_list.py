@@ -10,4 +10,7 @@ class MyList(list):
     def print_sorted(self):
         """[print sorted list]
         """
-        print(sorted(self))
+        new_list = []
+        new_list = self.copy()
+        new_list.sort()
+        print(new_list)
