@@ -5,7 +5,7 @@
 ::
 
     >>> MyList = __import__('1-my_list').MyList
-    
+
     >>> type(MyList())
     <class '1-my_list.MyList'>
 
@@ -75,7 +75,7 @@
     >>> l.print_sorted()
     [0, 0, 0]
 
->>> l.print_sorted(44, 33)
-Traceback (most recent call last):
-...
-TypeError: print_sorted() takes 1 positional argument but 3 were given
+    >>> l.print_sorted(44, 33)
+    Traceback (most recent call last):
+    ...
+    TypeError: print_sorted() takes 1 positional argument but 3 were given
