@@ -29,7 +29,8 @@ class Rectangle(BaseGeometry):
         Rectangle.integer_validator(self, "height", self.__height)
 
     def __str__(self):
-        string = "["+ str(self.__class__.__name__) +"] {}/{}" .format(self.__width, self.__height)
+        string = "[" + str(self.__class__.__name__) + "] "
+        string += str(self.__width) + "/" + str(self.__height)
         return string
 
     def area(self):
