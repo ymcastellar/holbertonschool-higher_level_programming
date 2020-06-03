@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 """[Geometry module]
 """
-
-
 Rectangle = __import__('9-rectangle').Rectangle
 
 
@@ -16,5 +14,5 @@ class Square(Rectangle):
         self.integer_validator("size", size)
 
     def __str__(self):
-        string = "[Rectangle] {}/{}" .format(self.__size, self.__size)
+        string = "[Rectangle] {}/{}".format(self.__size, self.__size)
         return string
