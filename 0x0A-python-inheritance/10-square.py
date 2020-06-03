@@ -9,9 +9,9 @@ class Square(Rectangle):
     """
 
     def __init__(self, size):
-        self.__size = size
+        super().integer_validator('size', size)
         super().__init__(size, size)
-        super().integer_validator("size", size)
+        self.__size = size
 
     def __str__(self):
         string = "[Rectangle] {}/{}".format(self.__size, self.__size)
