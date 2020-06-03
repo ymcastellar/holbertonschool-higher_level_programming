@@ -4,6 +4,8 @@
 
 
 def number_of_lines(filename=""):
+    """[number_of_lines]
+    """
     line = 0
     with open(filename) as f:
         for i in f:

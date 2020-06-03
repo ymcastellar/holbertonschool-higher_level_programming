@@ -4,6 +4,8 @@
 
 
 def read_lines(filename="", nb_lines=0):
+    """[read_lines]
+    """
     line = 0
     with open(filename, mode="r", encoding="UTF8") as f:
         for i in open(filename):
