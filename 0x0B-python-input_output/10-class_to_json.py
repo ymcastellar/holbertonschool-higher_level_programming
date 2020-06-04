@@ -4,12 +4,6 @@
 
 
 def class_to_json(obj):
-"""[class_to_json]
-"""
-
-    def __init__(self, name):
-        self.name = name
-        self.number = 0
-
-    def __str__(self):
-        return "[MyClass] {} - {:d}".format(self.name, self.number)
+    """class_to_json method
+    """
+    return (obj.__dict__)
