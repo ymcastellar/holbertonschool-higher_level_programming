@@ -4,17 +4,14 @@
 
 
 def pascal_triangle(n):
-    """pascal_triangle
-    """
     if n <= 0:
         return []
-
-    triangles = [[1]]
-    while len(triangles) != n:
-        tri = triangles[-1]
-        tmp = [1]
-        for i in range(len(tri) - 1):
-            tmp.append(tri[i] + tri[i + 1])
-            tmp.append(1)
-            triangles.append(tmp)
-    return triangles
+    pascal = []
+    row = []
+    for i in range(n):
+        row = [1]
+        if i > 0:
+            for j in range(i):
+                row.append(sum(pascal[-1][j:j+2]))
+        pascal.append(row)
+    return pascal
