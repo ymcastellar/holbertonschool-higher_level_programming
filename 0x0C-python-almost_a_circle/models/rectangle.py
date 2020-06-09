@@ -73,7 +73,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, x):
-        """ x stter 
+        """ x stter
         """
         if type(x) is not int:
             raise TypeError("x must be an integer")
