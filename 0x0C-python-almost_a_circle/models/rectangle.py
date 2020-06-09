@@ -21,10 +21,21 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """getter
+        """
         return self.__width
 
     @width.setter
     def width(self, width):
+        """[setter]
+
+        Args:
+            width ([type]): [width]
+
+        Raises:
+            TypeError: [must be an integer]
+            ValueError: [must be > 0]
+        """
         if type(width) is not int:
             raise TypeError("width must be an integer")
         if width < 0:
@@ -33,10 +44,21 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """[height getter]
+        """
         return self.__height
 
     @height.setter
     def height(self, height):
+        """[height.setter]
+
+        Args:
+            height ([type]): [height.setter]
+
+        Raises:
+            TypeError: [must be an integer]
+            ValueError: [must be > 0]
+        """
         if type(height) is not int:
             raise TypeError("height must be an integer")
         if height < 0:
@@ -45,10 +67,14 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """x getter
+        """
         return self.__x
 
     @x.setter
     def x(self, x):
+        """ x stter 
+        """
         if type(x) is not int:
             raise TypeError("x must be an integer")
         if x < 0:
@@ -57,10 +83,21 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """[y getter]
+        """
         return self.__y
 
     @y.setter
     def y(self, y):
+        """[y setter]
+
+        Args:
+            y ([type]): [description]
+
+        Raises:
+            TypeError: [must be an integer]
+            ValueError: [must be > 0]
+        """
         if type(y) is not int:
             raise TypeError("y must be an integer")
         if y < 0:
@@ -68,9 +105,13 @@ class Rectangle(Base):
         self.__y = y
 
     def area(self):
+        """get area
+        """
         return self.__height * self.__width
 
     def display(self):
+        """[display]
+        """
         for nl in range(self.y):
             print()
         for ht in range(self.height):
@@ -81,11 +122,15 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
+        """stdout
+        """
         return "[{}] ({}) {}/{} - {}/{}\
             ".format(type(self).__name__, self.id, self.x, self.y, self.width,
                      self.height)
 
     def arg_update(self, id=None, width=None, height=None, x=None, y=None):
+        """[arg_update]
+        """
         if id is not None:
             self.id = id
         if width is not None:
@@ -98,12 +143,16 @@ class Rectangle(Base):
             self.y = y
 
     def update(self, *args, **kwargs):
+        """ update
+        """
         if args:
             self.arg_update(*args)
         elif kwargs:
             self.arg_update(**kwargs)
 
     def to_dictionary(self):
+        """to dictionary
+        """
         return {
             "id": self.id,
             "width": self.width,
