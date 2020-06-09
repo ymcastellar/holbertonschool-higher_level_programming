@@ -124,9 +124,9 @@ class Rectangle(Base):
     def __str__(self):
         """stdout
         """
-        return "[{}] ({}) {}/{} - {}/{}\
-            ".format(type(self).__name__, self.id, self.x, self.y, self.width,
-                     self.height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                                                       self.x, self.y,
+                                                       self.width, self.height)
 
     def arg_update(self, id=None, width=None, height=None, x=None, y=None):
         """[arg_update]
