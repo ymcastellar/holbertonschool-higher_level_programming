@@ -8,6 +8,8 @@ class Square(Rectangle):
     """[class Square that inherits from Rectangle]
     """
     def __init__(self, size, x=0, y=0, id=None):
+        """Initialize a new Square
+        """
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
@@ -16,7 +18,7 @@ class Square(Rectangle):
 
     @property
     def size(self):
-        """Get/set the size of the Square."""
+        """Get the size of the Square."""
         return self.width
 
     @size.setter
@@ -25,6 +27,8 @@ class Square(Rectangle):
         self.height = value
 
     def arg_update(self, id=None, size=None, x=None, y=None):
+        """ update square
+        """
         if id is not None:
             self.id = id
         if size is not None:
@@ -35,12 +39,16 @@ class Square(Rectangle):
             self.y = y
 
     def update(self, *args, **kwargs):
+        """ update square using args
+        """
         if args:
             self.arg_update(*args)
         elif kwargs:
             self.arg_update(**kwargs)
 
     def to_dictionary(self):
+        """ return a dictionary
+        """
         return {
             "id": self.id,
             "size": self.width,
