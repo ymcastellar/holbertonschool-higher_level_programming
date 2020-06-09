@@ -1,10 +1,10 @@
-#!/usr/bin/python3
 """
 Test cases for Rectangle class.
 """
 
 import unittest
 import os
+import json
 from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square

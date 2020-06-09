@@ -1,9 +1,8 @@
-#!/usr/bin/python3
-# TestBase.py
 """Testing Base
 """
 import os
 import unittest
+import json
 from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
