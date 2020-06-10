@@ -14,6 +14,7 @@ class TestRectangleClass(unittest.TestCase):
     """A test class created to run tests for Rectangle class"""
 
     def setUp(self):
+        """ testing objects"""
         Base._Base__nb_objects = 0
 
     def test_2_rec_inherit(self):

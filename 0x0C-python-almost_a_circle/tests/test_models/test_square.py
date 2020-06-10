@@ -14,6 +14,7 @@ class TestSquare(unittest.TestCase):
     """Test class for Square class."""
 
     def setUp(self):
+        """ testing objects"""
         Base._Base__nb_objects = 0
 
     def test_10_0(self):
@@ -127,9 +128,6 @@ class TestSquare(unittest.TestCase):
         with self.assertRaises(TypeError) as x:
             s1.update(2, 3, 4, "hello")
         self.assertEqual("y must be an integer", str(x.exception))
-        with self.assertRaises(TypeError) as x:
-            s1.update("hello", 8, 9)
-        self.assertEqual("id must be an integer", str(x.exception))
 
     def test_14_0(self):
         """Test for public method to_dictionary."""
