@@ -22,8 +22,8 @@ if __name__ == "__main__":
     for state in session.query(State).filter(State.name == sys.argv[4]).all():
         result = state.id
     if result:
-        print(state.id)
+        print(result)
     else:
-        print('Nothing')
+        print('Not found')
 
     session.close()
