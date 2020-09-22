@@ -2,9 +2,7 @@
 
 const fs = require('fs');
 
-const content = 'Python is cool';
-
-fs.writeFile(process.argv[2], content, (err) => {
+fs.writeFile(process.argv[2], process.argv[3], (err) => {
   if (err) {
     console.error(err);
   }
